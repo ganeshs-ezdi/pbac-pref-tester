@@ -23,7 +23,7 @@ import java.util.List;
  * Created by EZDI\ganesh.s on 20/9/16.
  */
 @Component
-public class TestRunner implements CommandLineRunner{
+public class TestRunner implements CommandLineRunner {
     private static Logger logger = LoggerFactory.getLogger(TestRunner.class);
 
     @Value("${pbac.url}")
@@ -45,6 +45,8 @@ public class TestRunner implements CommandLineRunner{
         for( int i=0 ; i<count ; i++ ) {
             test(i);
         }
+
+        System.exit(0);
     }
 
     public void test(int idx) {
